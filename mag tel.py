@@ -2,7 +2,7 @@
 import telnetlib
 import getpass
 import csv
-
+import time
 #variables
 x = 1
 
@@ -54,6 +54,7 @@ while x == x<1082:
                 print (command)#this is just for peace of mind could probably be removed
                 command_byte = command.encode()#encodes the command so it can be read by the api
                 tn.write(command_byte)#sends the command by telnet
+                time.sleep(1)
                 x=x+1
         elif destination == str(2):
                 print (y)
@@ -62,6 +63,7 @@ while x == x<1082:
                 print (command)
                 command_byte = command.encode()
                 tn.write(command_byte)
+                time.sleep(1)
                 x=x+1
     
 
